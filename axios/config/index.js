@@ -5,12 +5,22 @@
 const path = require('path')
 
 module.exports = {
+  
   dev: {
-
+    
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api': {
+        target: 'http://192.168.1.220:8086/xt_cloud',//陈全平
+        // target: 'http://192.168.1.10:8086',//谢
+       // changeOrigin: true,
+        pathRewrite: {
+          '^/api': '/'
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
