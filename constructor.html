@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="test">
+        <span v-html="msg"></span>
+    </div>
+</body>
+</html>
+<style>
+
+
+
+</style>
+<script>
+const myObject = {
+  a: 1,
+  b: 2,
+  c: 3
+};
+
+const { a, ...x } = myObject;
+console.log(a)
+
+</script>
+<script>
+    let vm;
+    let app = new Vue({
+        el:'#test',
+        data(){
+            return{
+                msg:'12131231<br>231231231'
+            }
+        }
+    })
+</script>
