@@ -76,7 +76,6 @@ instance.interceptors.response.use(
         }
     },
     error => {
-        console.dir(error)
         loadingInstance.close()
         const { response } = error;
         if(response){
